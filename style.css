@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.body-container {
+    width: 100vww;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.available-moves {
+    animation: hobble .7s infinite;
+}
+@keyframes hobble {
+    50% { 
+        box-shadow: 0px 0px 10px rgb(3, 58, 3); 
+        opacity : .5;
+    }
+    100% { 
+        box-shadow: 0px 0px 0px rgb(126, 199, 10); 
+        opacity: 1;
+    }
+}
+
+.chess-container {
+    margin: auto;
+    display: none;
+    flex-direction: column-reverse;
+    border: 5px solid rgb(235, 231, 231);
+    transition: .5s;
+}
+@keyframes popIn {
+    0% { transform: scale(0); }
+    50% { transform: scale(.8); }
+    70% { transform: scale(1.1); }
+    80% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+.console-container {
+    display: none;
+    color: white;
+    width: 100% auto;
+    height: 100% auto;
+    background-color: khaki;
+    margin: auto;
+}
+.row-div {
+    display: flex;
+    width: 80vh;
+    height: 10vh;
+}
+.col-div {
+    width: 10vh;
+    height: 10vh;
+}
+.odd {
+    background-color: rgb(61, 61, 61);
+}
+.even {
+    background-color: rgb(218, 218, 218);
+}
+.pawn {
+    width: 100%;
+    height: 100%;
+    color: tomato;
+    display: flex;
+    font-size: 30px;
+    font-weight: 800;
+    justify-content: center;
+    align-items: center;
+}
+.white-pieces {
+    filter: invert(0%);
+    margin: 10px;
+    cursor: pointer;
+}
+.black-pieces {
+    filter: invert(100%);
+    margin: 10px;
+    cursor: pointer;
+}
